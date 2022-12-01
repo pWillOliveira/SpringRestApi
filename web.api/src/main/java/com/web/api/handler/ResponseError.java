@@ -1,0 +1,49 @@
+package com.web.api.handler;
+
+import java.util.Date;
+
+public class ResponseError {
+	private Date timestamp = new Date();
+	private String status = "error";
+	private int statusCode = 400;
+	private String error;
+
+	@Override
+	public String toString() {
+		return "ResponseError [timestamp=" + timestamp + ", status=" + status + ", statusCode=" + statusCode
+				+ ", error=" + error + "]";
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public int getStatusCode() {
+		return statusCode;
+	}
+
+	public void setStatusCode(int statusCode) {
+		this.statusCode = statusCode;
+	}
+
+	public String getError() {
+		return error;
+	}
+
+	public void setError(String error) {
+		this.error = error;
+	}
+
+	public void setTimestamp(Date timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	public Date getTimestamp() {
+		return timestamp;
+	}
+
+}
